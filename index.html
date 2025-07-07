@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja pierwsza strona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .highlight {
+            background-color: yellow;
+            padding: 2px 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Witaj na mojej pierwszej stronie!</h1>
+    
+    <div class="box">
+        <h2>O mnie</h2>
+        <p>Cześć! Jestem <span class="highlight">początkującym</span> programistą i uczę się GitHuba oraz HTML.</p>
+        <p>To jest moja pierwsza strona internetowa!</p>
+    </div>
+    
+    <div class="box">
+        <h2>Moje zainteresowania</h2>
+        <ul>
+            <li>Programowanie</li>
+            <li>GitHub</li>
+            <li>Uczenie się nowych rzeczy</li>
+            <li>Eksperymentowanie z kodem</li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <h2>Przydatne linki</h2>
+        <p>Sprawdź te strony:</p>
+        <ul>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+            <li><a href="https://developer.mozilla.org/pl/" target="_blank">MDN - nauka HTML</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <h2>Interaktywność</h2>
+        <p>Kliknij przycisk poniżej:</p>
+        <button onclick="zmienTekst()">Kliknij mnie!</button>
+        <p id="tekst">Tutaj pojawi się wiadomość</p>
+    </div>
+    
+    <div class="box">
+        <h2>Licznik kliknięć</h2>
+        <p>Kliknięcia: <span id="licznik">0</span></p>
+        <button onclick="zwieksz()">Zwiększ licznik</button>
+        <button onclick="reset()">Resetuj</button>
+    </div>
+    
+    <script>
+        let kliknecia = 0;
+        
+        function zmienTekst() {
+            document.getElementById('tekst').innerHTML = '🎉 Brawo! Kliknąłeś przycisk!';
+        }
+        
+        function zwieksz() {
+            kliknecia++;
+            document.getElementById('licznik').innerHTML = kliknecia;
+        }
+        
+        function reset() {
+            kliknecia = 0;
+            document.getElementById('licznik').innerHTML = kliknecia;
+        }
+    </script>
+</body>
+</html>
